@@ -4,7 +4,7 @@ description: "Check drafts for oversharing, weak boundaries, and avoidable risks
 argument-hint: "[draft-message-or-context]"
 version: "1.0.0"
 user-invocable: true
-allowed-tools: Read
+allowed-tools: Read, Bash
 ---
 
 > **Language / 语言**: This skill supports both English and Chinese. Detect the user's language from the user's first message and respond in the same language throughout.
@@ -34,7 +34,7 @@ allowed-tools: Read
 
 ## 工具使用规则
 
-本 Skill 适配支持文件读取的 Skill Runtime，例如 Trae、Claude Code、OpenClaw。优先使用以下工具：
+本 Skill 适配支持文件读取和 Bash 执行的 Skill Runtime，例如 Trae、Claude Code、OpenClaw。优先使用以下工具：
 
 | 任务 | 使用工具 |
 |------|----------|
@@ -42,6 +42,15 @@ allowed-tools: Read
 | 读取 PDF | `Read` 工具（原生支持 PDF） |
 | 读取 Markdown / TXT / 文档文本 | `Read` 工具 |
 | 读取代码 / 技术说明 / PR 评论 | `Read` 工具 |
+| 解析飞书导出 JSON / TXT | `Bash` -> `python3 ${CLAUDE_SKILL_DIR}/tools/feishu_parser.py` |
+| 解析邮件 `.eml` / `.mbox` | `Bash` -> `python3 ${CLAUDE_SKILL_DIR}/tools/email_parser.py` |
+| 自动采集飞书材料 | `Bash` -> `python3 ${CLAUDE_SKILL_DIR}/tools/feishu_auto_collector.py` |
+| 自动采集钉钉材料 | `Bash` -> `python3 ${CLAUDE_SKILL_DIR}/tools/dingtalk_auto_collector.py` |
+| 自动采集 Slack 材料 | `Bash` -> `python3 ${CLAUDE_SKILL_DIR}/tools/slack_auto_collector.py` |
+| 浏览器抓取飞书文档 / 群聊 | `Bash` -> `python3 ${CLAUDE_SKILL_DIR}/tools/feishu_browser.py` |
+| 通过 MCP 读取飞书内容 | `Bash` -> `python3 ${CLAUDE_SKILL_DIR}/tools/feishu_mcp_client.py` |
+
+如果当前运行时不支持 `Bash`，引导用户先在本地运行 `tools/` 脚本，再把整理结果贴回来继续审查和改写。
 
 允许分析的原材料：
 

@@ -1,0 +1,8 @@
+﻿# Required for Feishu / DingTalk collectors and Feishu MCP helper
+requests>=2.28.0
+
+# Optional for browser-based Feishu / DingTalk collection
+playwright>=1.40.0
+
+# Optional for Slack auto collector
+slack-sdk>=3.27.0

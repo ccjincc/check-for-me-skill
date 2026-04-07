@@ -15,7 +15,7 @@
 
 **发出去之前，先帮你看一眼这段话到底适不适合发送。**
 
-[支持的数据来源](#支持的数据来源) · [安装](#安装) · [使用](#使用) · [效果示例](#效果示例) · [项目结构](#项目结构)
+[支持的数据来源](#支持的数据来源) · [安装](#安装) · [可选工具](#可选工具) · [使用](#使用) · [效果示例](#效果示例) · [项目结构](#项目结构)
 
 </div>
 
@@ -57,6 +57,30 @@
 ## 安装
 
 详见 `INSTALL.md`。
+
+如果你只使用最基础的 Skill 能力，当前仓库内容已经够用。
+如果你还想补飞书、钉钉、Slack、邮件等材料采集和导出解析，可额外安装：
+
+```bash
+pip3 install -r requirements.txt
+playwright install chromium
+```
+
+---
+
+## 可选工具
+
+仓库已补充 `tools/` 目录，用于把原始材料整理成更适合 Skill 分析的输入。
+
+- 飞书自动采集：`tools/feishu_auto_collector.py`
+- 飞书导出解析：`tools/feishu_parser.py`
+- 飞书浏览器抓取：`tools/feishu_browser.py`
+- 飞书 MCP 读取：`tools/feishu_mcp_client.py`
+- 钉钉自动采集：`tools/dingtalk_auto_collector.py`
+- Slack 自动采集：`tools/slack_auto_collector.py`
+- 邮件解析：`tools/email_parser.py`
+
+详细说明见 `tools/README.md`，第三方来源和许可见 `docs/THIRD_PARTY.md`。
 
 ---
 

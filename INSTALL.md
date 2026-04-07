@@ -19,6 +19,19 @@ mkdir -p .claude/skills
 
 将仓库根目录的全部内容复制到项目根目录的 `.trae/skills/check-for-me/` 下即可。
 
+## 可选工具依赖
+
+如果你想启用 `tools/` 目录下的自动采集、导出解析和浏览器抓取脚本，可额外安装：
+
+```bash
+pip3 install -r requirements.txt
+playwright install chromium
+```
+
+这些依赖不是基础 Skill 运行必需项；只想分析截图、PDF、Markdown、代码评论时可以不装。
+
+更多脚本说明见 `tools/README.md`。
+
 ## 使用
 
 ```text
