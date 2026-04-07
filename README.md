@@ -4,6 +4,11 @@
 
 > *发之前多看一眼，很多锅本来可以不背。*
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
+[![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
+
 <br>
 
 写了一大段解释，发出去前总觉得不踏实？<br>
@@ -79,6 +84,9 @@ playwright install chromium
 - 钉钉自动采集：`tools/dingtalk_auto_collector.py`
 - Slack 自动采集：`tools/slack_auto_collector.py`
 - 邮件解析：`tools/email_parser.py`
+- 通用聊天导出解析：`tools/generic_chat_parser.py`
+- 微信导出解析：`tools/wechat_parser.py`
+- QQ 导出解析：`tools/qq_parser.py`
 
 详细说明见 `tools/README.md`，第三方来源和许可见 `docs/THIRD_PARTY.md`。
 

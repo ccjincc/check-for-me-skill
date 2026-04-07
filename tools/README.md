@@ -11,6 +11,9 @@
 - `dingtalk_auto_collector.py`: 采集钉钉用户相关文档、多维表格和消息材料
 - `slack_auto_collector.py`: 拉取 Slack 频道、群 DM、私聊中的目标消息
 - `email_parser.py`: 解析 `.eml`、`.mbox`、纯文本邮件记录
+- `generic_chat_parser.py`: 解析通用 txt / markdown 聊天记录并提取目标发言
+- `wechat_parser.py`: 提取微信导出 txt / html / csv 中与目标对象相关的内容
+- `qq_parser.py`: 解析 QQ 导出的 txt / mht 聊天记录
 
 ## 安装依赖
 
